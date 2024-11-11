@@ -1,0 +1,28 @@
+/* In your app.css file */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+/* In your app.css file */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-top: 4rem; /* Adjust this value based on the height of your header */
+}
+.footer {
+  background-color: #333;
+  padding: 1rem 0;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, color 0.3s ease;
+  margin-top: auto;
+}
+
+
+

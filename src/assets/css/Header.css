@@ -1,0 +1,129 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(51, 51, 51, 0.8);
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: background 0.3s ease, padding 0.3s ease;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.header.scrolled {
+  background: rgba(34, 34, 34, 0.8);
+  padding: 0.5rem 2rem;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+}
+
+.header a {
+  color: inherit;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header a:hover {
+  color: #fff;
+  background-color: #555;
+}
+
+.header button {
+  background: #f0a500;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.header button:hover {
+  background: #ffcc00;
+}
+
+/* Guest (before login) styles */
+.header.guest {
+  background: rgba(34, 34, 34, 0.8);
+}
+
+.header.guest a {
+  color: #ccc;
+}
+
+.header.guest a:hover {
+  color: #fff;
+  background-color: #444;
+}
+
+/* User styles */
+.header.user {
+  background: rgba(76, 175, 80, 0.8);
+}
+
+.header.user a {
+  color: #fff;
+}
+
+.header.user a:hover {
+  color: #c8e6c9;
+  background-color: #388e3c;
+}
+
+.header.user button {
+  background: #81c784;
+}
+
+.header.user button:hover {
+  background: #66bb6a;
+}
+
+/* Admin styles */
+.header.admin {
+  background: rgba(211, 47, 47, 0.8);
+}
+
+.header.admin a {
+  color: #fff;
+}
+
+.header.admin a:hover {
+  color: #ffcdd2;
+  background-color: #c62828;
+}
+
+.header.admin button {
+  background: #e57373;
+}
+
+.header.admin button:hover {
+  background: #ef5350;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.custom-link {
+  color: #1976d2; /* Primary color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.custom-link:hover {
+  color: #0d47a1; /* Darker shade on hover */
+  text-decoration: underline;
+}
