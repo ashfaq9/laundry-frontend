@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Container, TextField, Button, Typography, Box, CircularProgress } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import axios from '../../utils/api'; // Adjust the path as needed
+import axios from '../../utils/api'; 
 import Swal from 'sweetalert2';
-import '../../assets/css/ResetPassword.css'; // Import custom CSS
+import '../../assets/css/ResetPassword.css'; 
 
 const StyledContainer = styled(Container)(({ theme }) => ({
   height: '100vh',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  background: 'linear-gradient(to right, #6a11cb, #2575fc)', // Consistent background gradient
+  background: 'linear-gradient(to right, #6a11cb, #2575fc)', 
 }));
 
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -28,7 +28,7 @@ const ResetPassword = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,8 +40,8 @@ const ResetPassword = () => {
         text: 'Passwords do not match.',
         showConfirmButton: false,
         timer: 2000,
-        background: '#f2dede', // Error background color
-        color: '#a94442', // Error text color
+        background: '#f2dede',
+        color: '#a94442', 
         customClass: {
           container: 'swal-container swal-error',
           title: 'swal-title',
@@ -61,15 +61,15 @@ const ResetPassword = () => {
         text: response.data.message,
         showConfirmButton: false,
         timer: 2000,
-        background: '#dff0d8', // Success background color
-        color: '#3c763d', // Success text color
+        background: '#dff0d8', 
+        color: '#3c763d',
         customClass: {
           container: 'swal-container swal-success',
           title: 'swal-title',
           text: 'swal-text',
         },
       }).then(() => {
-        navigate('/login'); // Navigate to login page after reset
+        navigate('/login'); 
       });
     } catch (error) {
       Swal.fire({
@@ -78,8 +78,8 @@ const ResetPassword = () => {
         text: 'Error resetting password. Please try again.',
         showConfirmButton: false,
         timer: 2000,
-        background: '#f2dede', // Error background color
-        color: '#a94442', // Error text color
+        background: '#f2dede', 
+        color: '#a94442',
         customClass: {
           container: 'swal-container swal-error',
           title: 'swal-title',

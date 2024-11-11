@@ -51,12 +51,12 @@ const ServiceManagement = () => {
         'Image size is too large. Max size is 5MB.',
         (value) => {
           if (!isEditing && !value) {
-            return false; // Required for new services
+            return false; 
           }
           if (value instanceof File) {
             return value.size <= 5 * 1024 * 1024; // 5MB limit
           }
-          return true; // Skip validation if the image is unchanged
+          return true; 
         }
       ).required(isEditing ? undefined : 'Service image is required'),
     }),
@@ -87,7 +87,7 @@ const ServiceManagement = () => {
         setSnackbarMessage('Service saved successfully!');
         setSnackbarSeverity('success');
         setSnackbarOpen(true);
-        setTimeout(() => navigate('/admin/services'), 3000);  // Auto-redirect after 3 seconds
+        setTimeout(() => navigate('/admin/services'), 3000);  
         
       } catch (error) {
         console.error(`Failed to ${isEditing ? 'update' : 'add'} service:`, error);

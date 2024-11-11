@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Typography, Button, Grid, Card, CardContent, CardMedia, Box } from '@mui/material';
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel CSS
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link } from 'react-router-dom';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import '../../assets/css/Home.css'; // Custom CSS for additional styling
+import '../../assets/css/Home.css'; 
 
 import dryCleaningImage from '../../assets/images/11.jpg';
 import ironingImage from '../../assets/images/w.jpg';

@@ -1,11 +1,11 @@
 import React, { useEffect, useState,useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchServices } from '../../redux/actions/serviceActions';
-import { useNavigate } from 'react-router-dom'; // Correctly import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import { Grid, Card, CardContent, CardMedia, Typography, Button, TextField, Box, Collapse, Pagination } from '@mui/material';
-import '../../assets/css/ServiceList.css'; // Import the CSS file
+import '../../assets/css/ServiceList.css'; 
 
-const PAGE_SIZE = 6; // Number of services to display per page
+const PAGE_SIZE = 6; 
 
 const ServiceList = () => {
   const dispatch = useDispatch();

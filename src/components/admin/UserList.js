@@ -26,10 +26,10 @@ const UserList = () => {
   const { users, fetchUsers, token } = useContext(AuthContext);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredUsers, setFilteredUsers] = useState(users);
-  const [loading, setLoading] = useState(true); // Added loading state
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
-    fetchUsers().finally(() => setLoading(false)); // Updated loading state
+    fetchUsers().finally(() => setLoading(false)); 
   }, [fetchUsers]);
 
   useEffect(() => {
@@ -46,11 +46,11 @@ const UserList = () => {
         await axios.delete(`/api/users/delete/users/${userId}`, {
           headers: { Authorization: token },
         });
-        toast.success('User deleted successfully'); // Notify success
-        fetchUsers(); // Refresh the list after deletion
+        toast.success('User deleted successfully'); 
+        fetchUsers(); 
       } catch (error) {
         console.error('Error deleting user:', error);
-        toast.error('Error deleting user'); // Notify error
+        toast.error('Error deleting user');
       }
     }
   };

@@ -27,7 +27,7 @@ const Login = () => {
     },
     validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
-      setServerError(null); // Reset server error state before each submit
+      setServerError(null); 
       try {
         const user = await login(values);
         if (user.role === 'admin') {
@@ -47,13 +47,13 @@ const Login = () => {
         resetForm();
       } catch (err) {
         if (err.response) {
-          // Check for specific error messages
+   
           const serverMessage = err.response.data.message;
           if (serverMessage) {
-            setServerError(serverMessage); // Set the specific error message
+            setServerError(serverMessage); 
             MySwal.fire({
               title: 'Login Failed!',
-              text: serverMessage, // Show the specific error message in the alert
+              text: serverMessage, 
               icon: 'error',
               confirmButtonText: 'Try Again',
             });
@@ -115,7 +115,7 @@ const Login = () => {
           <Typography variant="h4" component="h1" gutterBottom align="center">
             Login
           </Typography>
-          {serverError && displayErrors()} {/* Display server errors */}
+          {serverError && displayErrors()} 
           <form onSubmit={formik.handleSubmit}>
             <TextField
               fullWidth

@@ -48,7 +48,7 @@ export default function RespondFeedback() {
         try {
             await axios.post(`/api/feedback/response/${feedbackId}`, {
                 comment: response[feedbackId],
-                adminName: 'Admin' // This can be replaced with the actual admin's name from context or props
+                adminName: 'Admin' 
             });
             setSubmitted(!submitted); // Toggle submitted to trigger re-fetch of feedbacks
             setResponse({ ...response, [feedbackId]: '' }); // Clear input after submission

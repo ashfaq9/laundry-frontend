@@ -27,12 +27,12 @@ export default function AdminDashboard() {
         mb={4}
         display="flex"
         justifyContent="flex-start"
-        gap={2} // Adds space between the buttons
+        gap={2} 
         sx={{
           position: 'sticky', // Makes the buttons sticky at the top
-          top: 0, // Aligns the buttons to the top
+          top: 0, 
           zIndex: 1000, // Ensures the buttons stay on top of other content
-          backgroundColor: '#f5f5f5', // Sets the background color of the button container
+          backgroundColor: '#f5f5f5', 
           padding: '10px', // Adds padding around the buttons
         }}
       >
@@ -61,7 +61,7 @@ export default function AdminDashboard() {
           Transaction Generate
         </Typography>
         <ReportsButtons />
-        {/* Add your transaction generation code here */}
+     
       </Box>
 
       {/* Transaction History Section */}
@@ -70,7 +70,7 @@ export default function AdminDashboard() {
           Transaction History
         </Typography>
         <TransactionTable />
-        {/* Add your transaction history code here */}
+      
       </Box>
     </div>
   );

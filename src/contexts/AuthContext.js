@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect, useCallback } from 'react';
 import axios from '../utils/api';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 
 export const AuthContext = createContext();
 
@@ -8,14 +8,14 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
   const [token, setToken] = useState(localStorage.getItem('token') || '');
   const [users, setUsers] = useState([]);
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const logout = useCallback(() => {
     setUser(null);
     setToken('');
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    navigate('/login'); // Navigate to the login page after logout
+    navigate('/login');
   }, [navigate]);
 
   useEffect(() => {
@@ -28,12 +28,12 @@ const AuthProvider = ({ children }) => {
               'Content-Type': 'multipart/form-data',
             },
           });
-          console.log('Fetched User:', response.data); // Log the fetch
+          console.log('Fetched User:', response.data); 
           setUser(response.data);
           localStorage.setItem('user', JSON.stringify(response.data));
         } catch (error) {
           console.error('Error fetching user', error);
-          logout(); // Logout if there is an error fetching user data
+          logout();
         }
       }
     };
